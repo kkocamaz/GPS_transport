@@ -31,16 +31,16 @@ route_addition = 0:100:100*(length(time_vector) - 1);
 
 
 
-out = cell2table(cell(0,18), 'VariableNames', {'arac_id', 'lon', 'lat', 'raw_time',...
+out = cell2table(cell(0,15), 'VariableNames', {'arac_id', 'lon', 'lat', 'raw_time',...
     'route_id','confidence','assos_nodes_start','assos_nodes_end', 'nodes_to_go',...
     'assos_dir', 'assos_segment_id','isMatchedSegments','distance_to_start_node',...
-    'distance_to_end_node','distance_from_start','space_diff','time_diff','speed'});
+    'distance_to_end_node','distance_from_start'});
 
 for j=1:1:size(data,1) %unique vehicle
     
     arac_id = data(j).vehicle;
     
-%     if categorical({arac_id}) == 's9x08sb'
+%     if categorical({arac_id}) == 'pvkccnn'
 %         asdad  = 10;
 %     end
     [osrm_data,tracep,null_trace,time] = get_tracepoints(data(j).match_result);
@@ -101,21 +101,23 @@ for j=1:1:size(data,1) %unique vehicle
     osrm_out.distance_from_start = NaN(size(osrm_out,1),1);
     osrm_out.distance_from_start(loc1) = segments.distance_from_start(nonzeros(loc2)) + osrm_out.distance_to_start_node(loc1);
     
-    osrm_out.space_diff = NaN(size(osrm_out,1),1);
-    osrm_out.time_diff = NaN(size(osrm_out,1),1);
-    osrm_out.speed = NaN(size(osrm_out,1),1);
-    
-    route_list = unique(osrm_out.route_id);
-    for z=1:1:length(route_list)
-%         get_data = matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).speed;
-%         get_data = get_arac(get_arac.route_id == route_list(j),:);
-%         matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).speed(1:end-1) = 1e-3*diff(matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).distance_from_start) ./ hours(diff(matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).raw_time));
-        index = osrm_out.route_id == route_list(z);
+%     osrm_out.space_diff = NaN(size(osrm_out,1),1);
+%     osrm_out.time_diff = NaN(size(osrm_out,1),1);
+%     osrm_out.speed = NaN(size(osrm_out,1),1);
+%     
+%     route_list = unique(osrm_out.route_id);
+%     for z=1:1:length(route_list)
+% %         get_data = matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).speed;
+% %         get_data = get_arac(get_arac.route_id == route_list(j),:);
+% %         matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).speed(1:end-1) = 1e-3*diff(matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).distance_from_start) ./ hours(diff(matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).raw_time));
+%         index = osrm_out.route_id == route_list(z);
+% 
+%         osrm_out(index, :).space_diff(1:end-1) = diff(osrm_out.distance_from_start(index));
+%         osrm_out(index, :).time_diff(1:end-1) = hours(diff(osrm_out.raw_time(index)));
+%         osrm_out(index,:).speed = 1e-3 * osrm_out(index, :).space_diff ./ osrm_out(index, :).time_diff;
+%     end
 
-        osrm_out(index, :).space_diff(1:end-1) = diff(osrm_out.distance_from_start(index));
-        osrm_out(index, :).time_diff(1:end-1) = hours(diff(osrm_out.raw_time(index)));
-        osrm_out(index,:).speed = 1e-3 * osrm_out(index, :).space_diff ./ osrm_out(index, :).time_diff;
-    end
+
 %     
 %     osrm_out.space_diff = NaN(size(osrm_out,1),1);
 %     osrm_out.space_diff(1:end-1) = diff(osrm_out.distance_from_start);
@@ -174,6 +176,31 @@ for i = 1:1:(length(time_vector) - 1)
     
     out((out.raw_time >= time_1) & (out.raw_time < time_2),:).route_id = out((out.raw_time >= time_1) & (out.raw_time < time_2),:).route_id + route_addition(i);
 end
+
+
+% 
+% out.space_distance = NaN(size(out,1),1);
+% out.time_distance = NaN(size(out,1),1);
+% out.speed = NaN(size(out,1),1);
+% 
+% 
+% arac_list = unique(out.arac_id);
+% 
+% for i=1:1:length(arac_list)
+%     route_list = unique(out(out.arac_id == arac_list(i),:).route_id);
+%     for j=1:1:length(route_list)
+% %         get_data = matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).speed;
+% %         get_data = get_arac(get_arac.route_id == route_list(j),:);
+% %         matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).speed(1:end-1) = 1e-3*diff(matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).distance_from_start) ./ hours(diff(matched(matched.arac_id == arac_list(i) & matched.route_id == route_list(j),:).raw_time));
+%         index = out.arac_id == arac_list(i) & out.route_id == route_list(j);
+% 
+%         out(index, :).space_distance(1:end-1) = diff(out(out.arac_id == arac_list(i) & out.route_id == route_list(j),:).distance_from_start);
+%         out(index, :).time_distance(1:end-1) = hours(diff(out(out.arac_id == arac_list(i) & out.route_id == route_list(j),:).raw_time));
+% 
+%     end
+% end
+% 
+% out.speed = 1e-3 * out.space_distance ./ out.time_distance;
 
 
 function [out,out2,out3,out4] = get_tracepoints(input)

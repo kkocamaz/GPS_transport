@@ -24,7 +24,7 @@ osrm_out.assos_nodes_end = uint64(osrm_out.assos_nodes_end);
 A = unique(osrm_out.arac_id);
 % B = groupcounts(osrm_out.arac_id);
 % aug_data = cell2table(cell(0,13), 'VariableNames', {'segment_id', 'start_node', 'end_node', 'calc_length', 'startLat', 'startLon', 'endLat', 'endLon', 'dir', 'AugTime', 'travel_time', 'AugType', 'arac_id'});
-aug_data = cell2table(cell(0,10), 'VariableNames', {'segment_id', 'aug_time', 'aug_type', 'arac_id', 'route_id','lat','lon','dir','speed','travel_time'});
+aug_data = cell2table(cell(0,11), 'VariableNames', {'segment_id', 'aug_time', 'aug_type', 'arac_id', 'route_id','lat','lon','dir','speed','time_diff','space_diff'});
 isUsedAug = [];
 
 % osrm_like = cell2table(cell(0, 2 + size(osrm_out,2)), 'VariableNames' , horzcat(osrm_out.Properties.VariableNames, {'speed', 'travel_time'}));
@@ -236,7 +236,8 @@ function [output,output2] = get_aug_data_v3(osrm_out,segments)
             aug_data.dir = segments.dir(first_ii:last_ii);
             aug_data.Properties.VariableNames = {'segment_id', 'aug_time', 'aug_type', 'arac_id', 'route_id','lat','lon','dir'};
             aug_data.speed = [1e-3*diff(space_axis(:,1)) ./ hours(diff(aug_data.aug_time)); NaN];
-            aug_data.travel_time = [diff(aug_data.aug_time); NaN];
+            aug_data.time_diff = [diff(aug_data.aug_time); NaN];
+            aug_data.space_diff = [diff(space_axis(:,1)); NaN];
             
             aug_data(1,:) = []; % route ilk segmentin ilk node'una extrapolate datası siliniyor. (time'da geriye doğru gider)
             
