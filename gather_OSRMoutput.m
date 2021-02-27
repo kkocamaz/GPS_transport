@@ -4,12 +4,13 @@ close all
 
 segments = load('input_data\osm.mat').osm;
 data = jsondecode(fileread('input_data\matches.json'));
+% data = jsondecode(fileread('C:\Users\Korhan\Desktop\OSRM\22\matches.json'));
 
 CONFIDENCE_LEVEL = 0.7;
 time_vector = datetime({'2019-11-18 08:00:00'}):minutes(30):datetime({'2019-11-18 10:00:00'});
 route_addition = 0:100:100*(length(time_vector) - 1);
 
-% tt = readtable('08_00-10_00-non-duplicated.csv');
+% tt = readtable('input_data\08_00-10_00-non-duplicated.csv');
 % tt.tarih = [];
 % tt.arac_id = categorical(tt.arac_id); %make vehicle ids categorical data type to efficiency
 % tt.Properties.VariableNames{5} = 'time';

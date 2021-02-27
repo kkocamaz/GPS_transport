@@ -12,7 +12,7 @@ clc
 
 
 % osrm_out = load('C:\Users\Korhan\Desktop\GitHub\tubitak-gps\comparison\korhan\processing_osrm\osrm_processed.mat').osrm_out;
-osrm_out = load('output_data\osrm_output.mat').out;
+osrm_out = load('output_data_v2\osrm_output.mat').out;
 
 osrm_out.isUsedAug = false(size(osrm_out,1),1);
 
