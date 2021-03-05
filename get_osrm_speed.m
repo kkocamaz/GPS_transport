@@ -2,8 +2,8 @@ clearvars
 close all
 clc
 
-out = load('output_data_v2\osrm_output.mat').out;
-out.isUsedAug = logical(load('output_data_v2\aug_output.mat').isUsedAug);
+out = load('output_data\osrm_output.mat').out;
+out.isUsedAug = logical(load('output_data\aug_output.mat').isUsedAug);
 
 %cleaning
 out = out(out.isUsedAug,:);
