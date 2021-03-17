@@ -37,8 +37,11 @@ out = cell2table(cell(0,15), 'VariableNames', {'arac_id', 'lon', 'lat', 'raw_tim
     'assos_dir', 'assos_segment_id','isMatchedSegments','distance_to_start_node',...
     'distance_to_end_node','distance_from_start'});
 
-for j=1:1:size(data,1) %unique vehicle
+for j=1:1:500%size(data,1) %unique vehicle
     
+%     if j == 12
+%         a=2;
+%     end
     arac_id = data(j).vehicle;
     
 %     if categorical({arac_id}) == 'pvkccnn'
