@@ -10,7 +10,7 @@ out = pd.DataFrame(columns=pd.Index(['arac_id', 'lon', 'lat', 'raw_time', 'route
                                      'assos_nodes_start', 'assos_nodes_end', 'assos_dir', 'assos_segment_id',
                                      'isMatchedSegments', 'distance_to_start_node', 'distance_to_end_node',
                                      'distance_from_start'],
-                                    dtype='object'))
+                                    dtype='object'))  # dtype object'e bir bak fazladan memory almasın?
 
 
 def get_distance(arg1, arg2, mode=1):

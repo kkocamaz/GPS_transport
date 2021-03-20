@@ -45,7 +45,7 @@ isUsedAug = [];
 % w5xcqs0
 % 
 for ii = 1:1:size(A,1)
-    if A(ii) == categorical("c63ssl1")
+    if A(ii) == categorical("wulw0rx"))
         break
     end
 end
