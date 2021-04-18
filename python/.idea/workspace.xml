@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2339bae8-4a18-41fe-b823-51e7279776fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/s_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes.mlx" beforeDir="false" afterPath="$PROJECT_DIR$/../routes.mlx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1pn0L9OuvBX00i0wisIPAWrdOSK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -180,6 +191,9 @@
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -231,6 +245,18 @@
       <workItem from="1616282544390" duration="1377000" />
       <workItem from="1616537905038" duration="1289000" />
       <workItem from="1617751408844" duration="7691000" />
+      <workItem from="1617833661285" duration="8405000" />
+      <workItem from="1617922101345" duration="1973000" />
+      <workItem from="1617963117746" duration="30000" />
+      <workItem from="1617963185428" duration="93000" />
+      <workItem from="1617963293376" duration="459000" />
+      <workItem from="1617963770335" duration="39000" />
+      <workItem from="1617963819146" duration="4531000" />
+      <workItem from="1617973792479" duration="3743000" />
+      <workItem from="1617977587276" duration="7272000" />
+      <workItem from="1617997553826" duration="136000" />
+      <workItem from="1617998083521" duration="595000" />
+      <workItem from="1618395549959" duration="240000" />
     </task>
     <servers />
   </component>
