@@ -1,5 +1,5 @@
 clearvars
-clear all
+clearvars
 close all
 clc
 
@@ -44,13 +44,13 @@ isUsedAug = [];
 % c50o03r 0.81
 % w5xcqs0
 % 
-for ii = 1:1:size(A,1)
-    if A(ii) == categorical("c63ssl1")
-        break
-    end
-end
+% for ii = 1:1:size(A,1)
+%     if A(ii) == categorical("c63ssl1")
+%         break
+%     end
+% end
 
-% ii=1;
+ii=1;
 
 for i = ii:1:size(A,1)
 %     i

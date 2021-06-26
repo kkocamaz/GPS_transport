@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 
-data = pd.read_json('C:/Users/Korhan/Desktop/GitHub/GPS_transport/input_data/matches.json')
-segments = pd.read_csv('C:/Users/Korhan/Desktop/GitHub/GPS_transport/input_data/python/segments.csv')
+data = pd.read_json('C:/Users/k/Desktop/GitHub/GPS_transport/input_data/matches.json')
+segments = pd.read_csv('C:/Users/k/Desktop/GitHub/GPS_transport/input_data/python/segments.csv')
 
 CONFIDENCE_LEVEL = 0.7
 

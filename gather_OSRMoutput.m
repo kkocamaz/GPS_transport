@@ -4,6 +4,7 @@ close all
 
 segments = load('input_data\osm.mat').osm;
 data = jsondecode(fileread('input_data\matches.json'));
+% data = jsondecode(fileread('input_data\2019-12-03.json'));
 % data = jsondecode(fileread('C:\Users\Korhan\Desktop\OSRM\22\matches.json'));
 
 CONFIDENCE_LEVEL = 0.7;

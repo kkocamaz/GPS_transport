@@ -1,5 +1,6 @@
-# *.csv
+*.csv
 # *.json
 # *.mat
 *.json
 *tar.gz
+*.h5

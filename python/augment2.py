@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 from scipy import interpolate
 
-osrm_out = pd.read_csv('C:/Users/Korhan/Desktop/GitHub/GPS_transport/input_data/python/osrm_out.csv')
-segments = pd.read_csv('C:/Users/Korhan/Desktop/GitHub/GPS_transport/input_data/python/segments.csv')
+osrm_out = pd.read_csv('C:/Users/k/Desktop/GitHub/GPS_transport/input_data/python/osrm_out.csv')
+segments = pd.read_csv('C:/Users/k/Desktop/GitHub/GPS_transport/input_data/python/segments.csv')
 
 osrm_out["isUsedAug"] = False
 
