@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4d600c4d-323a-4c8e-8804-b94035c36a86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/arima_segment-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/arima_segment-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arima_segment.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/arima_segment.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/arima_odtu-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/arima_odtu-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/arima_polatli-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/arima_polatli-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arima_odtu.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/arima_odtu.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arima_polatli.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/arima_polatli.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -100,7 +100,10 @@
       <module name="pythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\k\miniconda3\envs\ts2\python.exe" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\k\miniconda3\envs\jlab2\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../490/HW3/pythonProject" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -229,6 +232,7 @@
       <workItem from="1624886726558" duration="135000" />
       <workItem from="1624996340572" duration="634000" />
       <workItem from="1625174422673" duration="5224000" />
+      <workItem from="1625400124264" duration="5811000" />
     </task>
     <servers />
   </component>
