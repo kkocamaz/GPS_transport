@@ -7,19 +7,17 @@ This project is a part of an [TÜBİTAK 1501](https://www.tubitak.gov.tr/en/fund
 
 ## Contents
 
-## 1. Raw data and Scope of the Project
-## 2. Processing the Data
-### 2.1 Map-Matching Algorithm
-### 2.2 Transformation and Filtering the Data
-## 3. Findings
+- [Raw Data and Scope of the Project](#raw-data-and-scope-of-the-project)
+- [Processing the Data](#process-data)
+  - [Map-Matching Algorithm](#map-matching-algo)
+  - [Transformation and Filtering the Data](#transformation-and-filtering)
+- [Finding](#findings)
 
 
+## Raw Data and Scope of the Project
 
 
-
-
-
-
+![Raw Data Figure](https://github.com/kkocamaz/GPS_transport/tree/main/figs/readme/raw_data.png)
 
 
 | Syntax | Description |
