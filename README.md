@@ -17,7 +17,7 @@ This project is a part of an [TÜBİTAK 1501](https://www.tubitak.gov.tr/en/fund
 ## Raw Data and Scope of the Project
 
 
-![Raw Data Figure](https://github.com/kkocamaz/GPS_transport/tree/main/figs/readme/raw_data.png)
+![Raw Data Figure](figs/readme/raw_data.png)
 
 
 | Syntax | Description |
