@@ -4,12 +4,7 @@
     <list default="true" id="4d600c4d-323a-4c8e-8804-b94035c36a86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../hdy_figures.mlx" beforeDir="false" afterPath="$PROJECT_DIR$/../hdy_figures.mlx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/arima_milli_kutup-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/arima_milli_kutup-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/arima_polatli-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/arima_polatli-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/arima_milli_kutup.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/arima_milli_kutup.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arima_odtu.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/arima_odtu.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arima_polatli.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/arima_polatli.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arima_segment.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/arima_segment.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +237,9 @@
       <workItem from="1626556735023" duration="430000" />
       <workItem from="1626730307752" duration="2121000" />
       <workItem from="1626811374828" duration="6706000" />
+      <workItem from="1631105931543" duration="253000" />
+      <workItem from="1631106437011" duration="16000" />
+      <workItem from="1631106464544" duration="971000" />
     </task>
     <servers />
   </component>
