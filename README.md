@@ -7,14 +7,21 @@ This project is a part of an [TÜBİTAK 1501](https://www.tubitak.gov.tr/en/fund
 
 ## Contents
 
-- [Raw Data and Scope of the Project](#raw-data-and-scope-of-the-project)
+- [Raw Data](#raw-data)
+- [Scope of the Project](#scope-of-the-project)
 - [Processing the Data](#process-data)
   - [Map-Matching Algorithm](#map-matching-algo)
   - [Transformation and Filtering the Data](#transformation-and-filtering)
 - [Finding](#findings)
 
+##  Scope of the Project
 
-## Raw Data and Scope of the Project
+For selected time interval and space; gather the data, process it then predict travel times accurately. Since the data streams in real-time, create predictive models such that it can consider real-time data and update itself.
+Also, for academic purposes, any valuable research are welcomed. Currently, optimization of network topology (space discretization) for the accurate travel time prediction is being investigated.
+
+For the sake of simplicity, 75km-long corridor between Polatlı and Ankara city center is selected as a study space and raw data extracted for this corridor. Also, for now, research is being conducted with one month data (December, 2019).
+
+## Raw Data
 
 Raw data can be seen from this [toy dataset](https://raw.githubusercontent.com/kkocamaz/GPS_transport/main/input_data/08_00-10_00-non-duplicated.csv). The toy dataset contains data for only 2 hours duration for the selected corridor. Further, raw data for a randomly selected vehicle can see from the following figure.
 
@@ -34,28 +41,8 @@ Also, to be representative, a small portion of the toy dataset is shown in the b
 | 53s66da | 32.785458 | 39.9081 | 2019-11-18 09:07:05
 
 
+Also, in addition to raw GPS data from the vehicles ([Floating Car Data](https://en.wikipedia.org/wiki/Floating_car_data)), spatial discretization of the studied corridor is adopted from readily avaiable [OpenStreetMap](https://www.openstreetmap.org/) network topology. In this study, spatial discretization of the network topology is mentioned as *segments*.
 
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
+--segment figure--
 
-### My Great Heading {#custom-id}
-
-~~The world is flat.~~
-
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-
-
-
-> blockquote
-
-
----
-
-[title](https://www.example.com)
+--segment table--
