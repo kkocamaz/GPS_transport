@@ -43,6 +43,17 @@ Also, to be representative, a small portion of the toy dataset is shown in the b
 
 Also, in addition to raw GPS data from the vehicles ([Floating Car Data](https://en.wikipedia.org/wiki/Floating_car_data)), spatial discretization of the studied corridor is adopted from readily avaiable [OpenStreetMap](https://www.openstreetmap.org/) network topology. In this study, spatial discretization of the network topology is mentioned as *segments*.
 
---segment figure--
+The corridor space has divided into 655 segments wiwth varying length and segments are consecutive and continuous i.e. end point of a segment has the same latitude and longitude with start point of consecutive segment as shown in the figure.
 
---segment table--
+![Segment Figure](figs/readme/segments.png)
+
+
+
+| Segment ID | Start Node | End Node | startLat | startLon | endLat | endLon | dir | calc_length |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| 314 | 1397577716 | 308843810 | 39.5762323 | 32.1447012 | 39.575895 | 32.1439933 | 1 | 71.33302995 |
+| 315 | 308843810 | 308843811 | 39.575895 | 32.1439933 | 39.5754417 | 32.1428217 | 1 | 112.3622857 |
+| 316 | 308843811 | 308843812 | 39.5754417 | 32.1428217 | 39.5750067 | 32.1414283 | 1 | 128.8568069 |
+| 1001 | 2186060059 | 112273426 | 39.5748322 | 32.1414616 | 39.575075 | 32.1422917 | 2 | 76.10133449 |
+| 1002 | 112273426 | 27047880 | 39.575075 | 32.1422917 | 39.5758782 | 32.1445942 | 2 | 216.6242102 |
+| 1003 | 27047880 | 1397577714 | 39.5758782 | 32.1445942 | 39.5759738 | 32.1448068 | 2 | 21.0967387 |
