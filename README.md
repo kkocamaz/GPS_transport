@@ -11,8 +11,9 @@ This project is a part of an [TÜBİTAK 1501](https://www.tubitak.gov.tr/en/fund
 - [Scope of the Project](#scope-of-the-project)
 - [Processing the Data](#processing-the-data)
   - [Map-Matching](#map-matching)
-  - [Transformation and Filtering](#transformation-and-filtering)
-- [Finding](#findings)
+  - [Filtering and Smoothing](#filtering-and-smoothing)
+  - [Data Augmentation](#data-augmentation)
+- [Exploratory Analysis](#exploratory-analysis)
 
 ##  Scope of the Project
 
@@ -20,6 +21,8 @@ For selected time interval and space; gather the data, process it then predict t
 Also, for academic purposes, any valuable research are welcomed. Currently, optimization of network topology (space discretization) for the accurate travel time prediction is being investigated.
 
 For the sake of simplicity, 75km-long corridor between Polatlı and Ankara city center is selected as a study space and raw data extracted for this corridor. Also, for now, research is being conducted with one month data (December, 2019).
+
+![Corridor Figure](figs/readme/corridor.png)
 
 ## Raw Data
 
@@ -73,13 +76,37 @@ The final product of the map-matching process adds a projected longitude and lat
 
 | Vehicle ID | Lon | Lat | Timestamp | Route ID | Segment ID |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| 050l3cs | 32.720665 | 39.906138 | 18-Nov-2019 08:42:24 | 100 | 81 |
-| 050l3cs | 32.717992 | 39.906021 | 18-Nov-2019 08:42:34 | 100 | 81 |
-| 050l3cs | 32.71559 | 39.905915 | 18-Nov-2019 08:42:44 | 100 | 82 |
-| 050l3cs | 32.706418 | 39.905558 | 18-Nov-2019 09:25:35 | 201 | 86 |
-| 050l3cs | 32.703265 | 39.905444 | 18-Nov-2019 09:25:45 | 201 | 87 |
-| 050l3cs | 32.699856 | 39.90529 | 18-Nov-2019 09:25:55 | 201 | 88 |
-| 050l3cs | 32.696241 | 39.90483 | 18-Nov-2019 09:26:05 | 201 | 93 |
+| 050l3cs | 32.720665 | 39.906138 | 18-Nov-2019 08:42:24 | 1 | 81 |
+| 050l3cs | 32.717992 | 39.906021 | 18-Nov-2019 08:42:34 | 1 | 81 |
+| 050l3cs | 32.71559 | 39.905915 | 18-Nov-2019 08:42:44 | 1 | 82 |
+| 050l3cs | 32.706418 | 39.905558 | 18-Nov-2019 09:25:35 | 2 | 86 |
+| 050l3cs | 32.703265 | 39.905444 | 18-Nov-2019 09:25:45 | 2 | 87 |
+| 050l3cs | 32.699856 | 39.90529 | 18-Nov-2019 09:25:55 | 2 | 88 |
+| 050l3cs | 32.696241 | 39.90483 | 18-Nov-2019 09:26:05 | 2 | 93 |
 
 
--  ### Transformation and Filtering
+-  ### Filtering and Smoothing
+
+There are several filters for output for the map matching algorithm. Since the algorithm uses probabilistic approach, it returns confidence for each matched route. A certain threshold (75%) is determined for confidence level and any route that has lower confidecen level then the threshold is disregarded.
+
+Routes that have less than 2 data points are disregarded.
+Routes have data points for both directions are disregarded.
+Routes have matched datapoints to the segments out of corridor are disregarded.
+Then speed calculations are conducted for remaining routes. The following unphysical conditions are set.
+Speed > 200 km/h
+Speed < 0
+Acceleration > 3.5 m/sec^2
+Datapoints are deleted and speed values are calculated iteratively until there is no datapoints that matches the unphysical criteria.
+
+
+-  ### Data Augmentation
+
+Once the vehicle-specific routes are produced, it is possible to aggregate the MM GPS points over each segment, to find the first and the last GPS point on it. However, as the GPS point locations along a route can be rather randomly distributed over the time and space (i.e. multiple points in one segment versus one or no points on some segments), and it is not necessary to calculate instantaneous speed between two consecutive GPS points, a simple *constant speed approximation* is made between the last GPS point in a segment and the next GPS point on the route to estimate the approximate time of the vehicle through the start point of the next segment (which is the end point of the current segment as well). The approximate time and space information of a vehicle at the beginning of each segment along its route, led to an augmented MM GPS dataset, in which the same location of each observed vehicle is timestamped accordingly. Time difference between these augmentations simply produces the average time of each vehicle observed a segment, which can be averaged to estimate “space mean speed” of the segment within a given time period.
+
+
+![Augmentation Figure](figs/readme/aug_1.png)
+
+## Exploratory Analysis
+
+
+![Exploratory Analysis Figure 1](figs/readme/eda1.png)
