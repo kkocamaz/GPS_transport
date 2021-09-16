@@ -14,6 +14,7 @@ This project is a part of an [TÜBİTAK 1501](https://www.tubitak.gov.tr/en/fund
   - [Filtering and Smoothing](#filtering-and-smoothing)
   - [Data Augmentation](#data-augmentation)
 - [Exploratory Analysis](#exploratory-analysis)
+- [Outcomes](#outcomes)
 
 ##  Scope of the Project
 
@@ -108,10 +109,24 @@ Once the vehicle-specific routes are produced, it is possible to aggregate the M
 
 ## Exploratory Analysis
 
-
+Some of the figures used in exploratory analysis are shown below. In the following figure, x-axis is distance from kızılay (Ankara city square) and y-axis is speed in km/hr. Colors are assigned per vehicle-id for map-matched data (MAT) and red color is assigned for augmentation data (AUG).
 ![Exploratory Analysis Figure 1](figs/readme/eda1.png)
+
+In the following figure, distribution of map-matched data over the segments is shown in blue color. As can be seen, the map-matched data (MAT) is not uniformly distributed on the corridor. In particular, data scarcity can be seen on the short segments from figure in the below. One of the benefit for data augmentation can seen from the figure with red color. As can be seen, data can be augmented on the segments to tackle data scarcity problem and to increase accuracy of speed calculation.
 ![Exploratory Analysis Figure 2](figs/readme/eda2.png)
+
+The figure in the below shows the difference between the speed calculation methods. As can be seen *space mean speed* and *time mean speed* values are similar.
 ![Exploratory Analysis Figure 3](figs/readme/eda3.png)
+
+The following figure is discritized version of *time-space diagram* which is widely used in traffic engineering.
 ![Exploratory Analysis Figure 4](figs/readme/eda4.png)
+
+The following figure shows speed histograms for consecutive segments where blue shows map-matched data and red shows augmentation data. It can be said taht segment ID 43 migh be relatively longer segment or it can be joint from another road.
 ![Exploratory Analysis Figure 4](figs/readme/eda5.png)
 
+
+## Outcomes
+
+One of the outcomes can be read from this [link](./ace_RNN.pdf). Seasonal autoregressive integrated moving average (SARIMA) models are used to predict speed on each segments. *statsmodel* package is used in this work.
+
+Currently, optimum spatial discritization is of interest on our study. It is planned to detect traffic incidents and *events* by using machine learning algorithms. In addition, considereing outputs of the event detection algorithm, accurate spatial disciritization can be done with designed iterative algortihms.
